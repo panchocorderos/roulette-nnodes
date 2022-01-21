@@ -1,24 +1,49 @@
-# README
+# Readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Feature list:
 
-Things you may want to cover:
+* Start game
+* Add players (CRUD, name, cash=1000)
+* Class Round (play rounds)
+* Class for Consume WeatherAPI
+* End day command +10.000
+* Show rounds
 
-* Ruby version
 
-* System dependencies
+## Models 
 
-* Configuration
+### Round
+- result
+- weather
+- updated_at
+- created_at
 
-* Database creation
 
-* Database initialization
+### Bet
+- id_round
+- id_player
+- amount
+- color
+- updated_at
+- created_at
 
-* How to run the test suite
+### Player
+- name
+- cash
+- created_at
+- updated_at
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## To do list:
 
-* ...
+- [X] Initialize the project
+- [ ] Create models
+- [ ] Create view roulette (/)
+- [ ] CRUD player (/player/:id)
+- [ ] Create method start game (Round)
+- [ ] Create method end day (Round)
+- [ ] Create Job execute start game y end day
+- [ ] queue Jobs
+- [ ] consume Jobs with delayed_job periodically
+- [ ] Deploy heroku
+- [ ] Cron job heroku
