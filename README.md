@@ -37,9 +37,10 @@
 ## To do list:
 
 - [X] Initialize the project
-- [ ] Create models
-- [ ] Create view roulette (/)
-- [ ] CRUD player (/player/:id)
+- [X] Create models
+- [X] Create view roulette (/)
+- [X] CRUD player (/player/:id)
+- [ ] Fix enum ActiveRecord from bet and round
 - [ ] Create method start game (Round)
 - [ ] Create method end day (Round)
 - [ ] Create Job execute start game y end day
