@@ -40,9 +40,18 @@
 - [X] Create models
 - [X] Create view roulette (/)
 - [X] CRUD player (/player/:id)
-- [ ] Fix enum ActiveRecord from bet and round
-- [ ] Create method start game (Round)
-- [ ] Create method end day (Round)
+- [X] Fix enum ActiveRecord from bet and round
+- [x] Create method start game (Round)
+    - [x] 10.000 player default cash
+    - [x] if cash > 1000 8%-15% of bet amount
+    - [x] if cash < 1000 all in
+    - [x] if temperature of 7 days is upper than 29°C => 3%-7% of bet amount
+    - [x] Green 2%, Red 49%, Black 49%
+    - [x] if result is Red or Black player win bet_amount x2
+    - [x] if result is Green player win bet_amunt x15
+- [x] Create method end day (Round)
+    - [x] End of day players win 10.000 of cash
+- [ ] Consume weatherApi
 - [ ] Create Job execute start game y end day
 - [ ] queue Jobs
 - [ ] consume Jobs with delayed_job periodically
