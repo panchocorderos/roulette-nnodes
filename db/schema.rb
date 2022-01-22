@@ -16,9 +16,8 @@ ActiveRecord::Schema.define(version: 2022_01_21_184414) do
   enable_extension "plpgsql"
 
   create_table "bets", force: :cascade do |t|
-    t.integer "amount"
-    t.integer "color", default: 0
-    t.integer "result", default: 0
+    t.integer "amount", null: false
+    t.integer "color", null: false
     t.bigint "player_id"
     t.bigint "round_id"
     t.datetime "created_at", precision: 6, null: false
@@ -28,15 +27,15 @@ ActiveRecord::Schema.define(version: 2022_01_21_184414) do
   end
 
   create_table "players", force: :cascade do |t|
-    t.string "name"
-    t.integer "cash"
+    t.string "name", default: "10000", null: false
+    t.integer "cash", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "rounds", force: :cascade do |t|
-    t.string "result"
-    t.integer "weather"
+    t.integer "result_color", null: false
+    t.integer "weather", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
