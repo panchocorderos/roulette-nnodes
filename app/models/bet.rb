@@ -1,5 +1,5 @@
 class Bet < ApplicationRecord
-    enum :result [ :green, :red, :black]
-    has_many :players
-    has_many :rounds
+    enum :color, [ :green, :red, :black]
+    belongs_to :player
+    belongs_to :round
 end
