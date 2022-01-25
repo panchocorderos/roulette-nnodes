@@ -7,7 +7,7 @@
     <div class="players_container-scroll">
         <% @players.each do |player| %>
             <div class="card">
-                <%= image_tag("casino_chip", :alt => "casino chip", :size => "30x30", class: "card_icon")%>
+                <%= image_tag("casino_chip.svg", :alt => "casino chip", :size => "30x30", class: "card_icon")%>
                 <div class="card_info-player">
                         <%= player.name %> have $
                         <%= player.cash %>
