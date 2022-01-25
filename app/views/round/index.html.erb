@@ -1,1 +1,40 @@
-<h1>Hello!</h1>
+
+<%= stylesheet_link_tag "index"%>
+<h1 style="text-align:center">Roulette Nnodes</h1>
+<div class="container">
+    <div class="players_container">
+    <h2>Players</h2>
+    <div class="players_container-scroll">
+        <% @players.each do |player| %>
+            <div class="card">
+                <%= image_tag("casino_chip", :alt => "casino chip", :size => "30x30", class: "card_icon")%>
+                <div class="card_info-player">
+                        <%= player.name %> have $
+                        <%= player.cash %>
+                </div>
+            </div>
+        <% end %>
+
+    </div>
+        <button class="btn_add">
+            <%= link_to "Add player", new_player_path %>
+        </button>
+    </div>
+
+    <div class="bets">
+        <h2>Betting record</h2>
+        <div class="scrollable-bets">
+            <% @bets.each do |bet| %>
+                <div>
+                    <p class="bet-info">
+                        <%= bet.player.name %> bet
+                        <%= bet.amount %> to
+                        <%= bet.color %> and
+                        <%= bet.color == bet.round.result_color ? "wins! 🤑" : "lose! 😥"%>
+
+                    </p>            
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
