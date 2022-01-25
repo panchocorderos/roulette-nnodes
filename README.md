@@ -1,5 +1,5 @@
 # Readme
-##How to run
+## How to run
 
 Copy the .env.example file and make .env file and then put your token in API_KEY variable
 
@@ -59,6 +59,7 @@ Copy the .env.example file and make .env file and then put your token in API_KEY
 - [x] Get max_temp
 - [X] Create basic layout view
 - [X] Create .env and enviroment variable
+- [X] Move API method to lib/class 
 - [ ] Deploy heroku
 - [ ] Create jobs execute start game y end day in heroku
 - [ ] Documentation
