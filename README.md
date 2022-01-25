@@ -1,4 +1,8 @@
 # Readme
+##How to run
+
+Copy the .env.example file and make .env file and then put your token in API_KEY variable
+
 
 ## Feature list:
 
@@ -51,9 +55,10 @@
     - [x] if result is Green player win bet_amunt x15
 - [x] Create method end day (Round)
     - [x] End of day players win 10.000 of cash
-- [ ] Consume weatherApi
-- [ ] Create Job execute start game y end day
-- [ ] queue Jobs
-- [ ] consume Jobs with delayed_job periodically
+- [x] Consume weatherApi
+- [x] Get max_temp
+- [X] Create basic layout view
+- [X] Create .env and enviroment variable
 - [ ] Deploy heroku
-- [ ] Cron job heroku
+- [ ] Create jobs execute start game y end day in heroku
+- [ ] Documentation
