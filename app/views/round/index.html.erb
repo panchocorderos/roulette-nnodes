@@ -28,11 +28,12 @@
             <% @bets.each do |bet| %>
                 <div>
                     <p class="bet-info">
-                        <%= bet.player.name %> bet
-                        <%= bet.amount %> to
-                        <%= bet.color %> and
-                        <%= bet.color == bet.round.result_color ? "wins! 🤑" : "lose! 😥"%>
-
+                        <% if bet.amount != 0 %>
+                            <%= bet.player.name %> bet
+                            <%= bet.amount %> to
+                            <%= bet.color %> and
+                            <%= bet.color == bet.round.result_color ? "wins! 🤑" : "lose! 😥"%>
+                        <% end %>
                     </p>            
                 </div>
             <% end %>
