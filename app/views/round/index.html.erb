@@ -11,6 +11,7 @@
                 <div class="card_info-player">
                         <%= player.name %> have $
                         <%= player.cash %>
+                        <%= link_to "Edit this player", edit_player_path(player) %>
                 </div>
             </div>
         <% end %>
