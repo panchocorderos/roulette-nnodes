@@ -1,8 +1,21 @@
-# Readme
+# README - Nnodes tech challenge
+
+## Prerequisites
+If you want to run this app locally, you need to have this prerequisites:
+- Ruby 3.0+
+- Rails 7.0.1
+- PostgreSQL
+
 ## How to run
-
-Copy the .env.example file and make .env file and then put your token in API_KEY variable
-
+- Clone this project.
+- Copy the `.env.example` file and make `.env` file and then put your secret token from [OpenWeather](https://openweathermap.org/api)  in `API_KEY` variable.
+- Run this commands
+    ```bash
+    rails db:create
+    rails db:migrate
+    bundle
+    rails s
+    ```
 
 ## Feature list:
 
@@ -60,6 +73,5 @@ Copy the .env.example file and make .env file and then put your token in API_KEY
 - [X] Create basic layout view
 - [X] Create .env and enviroment variable
 - [X] Move API method to lib/class 
-- [ ] Deploy heroku
-- [ ] Create jobs execute start game y end day in heroku
-- [ ] Documentation
+- [X] Deploy heroku
+- [X] Documentation
